@@ -1,17 +1,16 @@
 fun getDate(year: Int, totalDays: Int): String {
-    val year = year
     var startMonth = 1
-    var daysInMonth = 0;
-    var rimanderDays = totalDays
-    var days = 0;
+    var daysInMonth: Int
+    var reminder = totalDays
+    val days: Int;
 
     while (true) {
         daysInMonth = daysInMonth(year, startMonth)
-        if (rimanderDays > daysInMonth) {
-            rimanderDays -= daysInMonth
+        if (reminder > daysInMonth) {
+            reminder -= daysInMonth
             startMonth++
         } else {
-            days = rimanderDays
+            days = reminder
             break
         }
     }
